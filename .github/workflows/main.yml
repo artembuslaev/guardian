@@ -44,28 +44,6 @@ jobs:
           popd
         env:
           CI: true
-      - name: Lint
-        run: |
-          pushd interfaces
-          npm run lint
-          popd
-          pushd common
-          npm run lint
-          popd
-          pushd logger-service
-          npm run lint
-          popd
-          pushd auth-service
-          npm run lint
-          popd
-          pushd guardian-service
-          npm run lint
-          popd
-          pushd api-gateway
-          npm run lint
-          popd
-        env:
-          CI: true
       - name: Test
         run: |
           pushd guardian-service
