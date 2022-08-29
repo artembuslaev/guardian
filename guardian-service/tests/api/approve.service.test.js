@@ -98,7 +98,7 @@ const channel = {
 describe.only('Approve Service API', function () {
     it('Get Approve Documents', async function () {
         approveAPIModule.approveAPI(channel, getMongoRepositoryMock(ApprovalDocument));
-        console.log('0000000000000000000000000 TEST ENVIRONMENT VARIABLE: ', process.env.TEST);
+        console.log('0000000000000000000000000 TEST ENVIRONMENT VARIABLE: ', process.env.TEST === "TEST", process.env.TEST == "TEST");
         const data = await methods['get-approve-documents']({ id: 'test' });
         assert.equal(data.body[0] instanceof ApprovalDocument, true);
 
