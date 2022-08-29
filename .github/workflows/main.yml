@@ -14,31 +14,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Build
         run: |
-          pushd interfaces
-          npm install
-          npm run build
-          popd
-          pushd common
-          npm install
-          npm run build
-          popd
-          pushd logger-service
-          npm install
-          npm run build
-          popd
-          pushd frontend
-          npm install
-          npm run build
-          popd
-          pushd auth-service
-          npm install
-          npm run build
-          popd
           pushd guardian-service
-          npm install
-          npm run build
-          popd
-          pushd api-gateway
           npm install
           npm run build
           popd
